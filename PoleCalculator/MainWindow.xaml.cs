@@ -37,7 +37,7 @@ namespace PoleCalculator
                 case "5 Foot":
                     for (int i = 0; i < stringNum.Length; i++)
                     {
-                        double num = Convert.ToDouble(stringNum[i]);
+                        double num = Double.TryParse(stringNum[i], out double value) ? value : 0;
                         double increase5 = (embedDouble - ((poleHeightDouble + 5) * 0.1 + 2)) + 5;
                         outputBox.Text += Convert.ToString($"{num + increase5}\n");
                     }
@@ -45,7 +45,7 @@ namespace PoleCalculator
                 case "10 Foot":
                     for (int i = 0; i < stringNum.Length; i++)
                     {
-                        double num = Convert.ToDouble(stringNum[i]);
+                        double num = Double.TryParse(stringNum[i], out double value) ? value: 0;
                         double increase10 = (embedDouble - ((poleHeightDouble + 10) * 0.1 + 2)) + 10;
                         outputBox.Text += Convert.ToString($"{num + increase10}\n");
                     }
@@ -53,7 +53,7 @@ namespace PoleCalculator
                 case "15 Foot":
                     for (int i = 0; i < stringNum.Length; i++)
                     {
-                        double num = Convert.ToDouble(stringNum[i]);
+                        double num = Double.TryParse(stringNum[i], out double value) ? value : 0;
                         double increase15 = (embedDouble - ((poleHeightDouble + 15) * 0.1 + 2)) + 15;
                         outputBox.Text += Convert.ToString($"{num + increase15}\n");
                     }
@@ -61,7 +61,7 @@ namespace PoleCalculator
                 case "Up Class":
                     for (int i = 0; i < stringNum.Length; i++)
                     {
-                        double num = Convert.ToDouble(stringNum[i]);
+                        double num = Double.TryParse(stringNum[i], out double value) ? value : 0;
                         double upClass = (embedDouble - ((poleHeightDouble) * 0.1 + 2));
                         outputBox.Text += Convert.ToString($"{num + upClass}\n");
                     }

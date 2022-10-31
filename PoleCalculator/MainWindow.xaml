@@ -11,21 +11,27 @@
     </Window.Background>
     <Grid Margin="0,0,0,-6">
         <Grid.RowDefinitions>
-            <RowDefinition Height = "113*" />
-            <RowDefinition Height = "162*" />
-            <RowDefinition Height = "65*" />
+            <RowDefinition Height = "*" />
+            <RowDefinition Height = "20" />
+            <RowDefinition Height = "*" />
+            <RowDefinition Height = "4*" />
+            <RowDefinition Height = "10" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width= "*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
         </Grid.ColumnDefinitions>
-        <TextBox x:Name ="inputBox" AcceptsReturn="True" Background="Aqua" BorderThickness="2" Margin="10,1,140,0" Grid.Row="1"/>
-        <TextBox x:Name ="outputBox"  AcceptsReturn="True" Background="Aqua" BorderThickness="2" Margin="150,113,0,5" Grid.RowSpan="2"/>
-        <TextBox x:Name="embedBox" Grid.Row="0" AcceptsReturn="True" Background="Aqua" BorderThickness="2" Margin="158,56,42,34" RenderTransformOrigin="0.493,1.564" />
-        <TextBox x:Name="poleHeightBox" AcceptsReturn="True" Background="Aqua" BorderThickness="2" Margin="46,57,146,34" RenderTransformOrigin="0.493,1.564" />
-        <Button x:Name="MathButton" Click="mathClick" Margin="105,10,105,63">Math</Button>
-        <ComboBox x:Name="mathSetting" HorizontalAlignment="Left" Margin="60,86,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding mathValue}" Height="22"/>
-        <Label HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="2" RenderTransformOrigin="3.026,-0.131" Margin="0,0,0,15" Height="26" Width="68">Version 1.0</Label>
-        <Label Margin="50,37,42,76">Embed</Label>
-        <Label Margin="40,37,27,28" Grid.Row="2" RenderTransformOrigin="0.072,0.551">Pole Height</Label>
+        <TextBox x:Name ="inputBox" Grid.Column="1" AcceptsReturn="True" Background="Aqua" BorderThickness="2" Grid.Row="3"/>
+        <TextBox x:Name ="outputBox" Grid.Column="3" Grid.Row="3" AcceptsReturn="True" Background="Aqua" BorderThickness="2"/>
+        <TextBox x:Name="embedBox" Grid.Row="1" Grid.Column="1" Background=" Aqua" BorderThickness="2" />
+        <TextBox x:Name="poleHeightBox" Grid.Row="1" Grid.Column="3" AcceptsReturn="True" Background="Aqua" BorderThickness="2" />
+        <Button x:Name="MathButton" Grid.Row="0" Grid.Column="2" Click="mathClick" Margin="10, 10, 10, 10">Math</Button>
+        <ComboBox x:Name="mathSetting" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center" Width="150" Height="20" ItemsSource="{Binding mathValue}"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="2" Height="26" Width="68">Version 1.0</Label>
+        <Label>Embed</Label>
+        <Label Grid.Row="2">Pole Height</Label>
     </Grid>
 </Window>
