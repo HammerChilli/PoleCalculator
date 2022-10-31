@@ -19,8 +19,12 @@
         </Grid.ColumnDefinitions>
         <TextBox x:Name ="inputBox" Width="100" Grid.Row="1" Grid.Column="0" AcceptsReturn="True" Background="Aqua" BorderThickness="2"/>
         <TextBox x:Name ="outputBox" Width="100" Grid.Row="1" Grid.Column="2" AcceptsReturn="True" Background="Aqua" BorderThickness="2"/>
+        <TextBox x:Name="embedBox" Width="50" Grid.Row="0" Grid.Column="1" AcceptsReturn="True" Background="Aqua" BorderThickness="2" Margin="50,63,50,63" RenderTransformOrigin="0.493,1.564" />
+        <TextBox x:Name="poleHeightBox" Width="50" Grid.Row="2" Grid.Column="1" AcceptsReturn="True" Background="Aqua" BorderThickness="2" Margin="50,63,50,63" RenderTransformOrigin="0.493,1.564" />
         <Button x:Name="MathButton" Grid.Row="1" Grid.Column="1" Click="mathClick" Height="40" Width="40" Margin="55,10,55,94">Math</Button>
         <ComboBox x:Name="mathSetting" Grid.Column="1" HorizontalAlignment="Center" Margin="0,97,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" ItemsSource="{Binding mathValue}"/>
         <Label HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="2" RenderTransformOrigin="3.026,-0.131" Margin="0,0,0,15">Version 1.0</Label>
+        <Label Margin="50,37,42,84" Grid.Column="1">Embed</Label>
+        <Label Margin="40,37,27,84" Grid.Column="1" Grid.Row="2" RenderTransformOrigin="0.072,0.551">Pole Height</Label>
     </Grid>
 </Window>
